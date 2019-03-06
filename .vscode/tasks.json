@@ -8,7 +8,8 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g", "test.c"
+                "-g", "${workspaceFolder}/Проектное задание 0/main.c"
+                //"-g", "test.c"
             ],
             "group": {
                 "kind": "build",
