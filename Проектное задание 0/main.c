@@ -2,7 +2,7 @@
 #include <iostream>
 
 int main() {
-    printf("LOL\n");
+    printf("LOL_LOL\n");
     system("pause");
     return 0;
 }
