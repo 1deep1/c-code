@@ -18,7 +18,7 @@
 int main() {
     double firstNum, secondNum, result;
     int error = 0;
-    char mark;
+    char mark = 0;
 
     while(mark != 'E') {
         //Обработка ошибок
