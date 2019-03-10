@@ -16,33 +16,11 @@
 @throws (-1) ошибка ввода, (-2) ошибка деления на 0 | *error;
 */
 int main() {
-    double firtsNum, secondNum;
-    int error;
+    double firstNum, secondNum, result;
+    int error = 0;
     char mark;
 
     while(mark != 'E') {
-        scanf("%lg %c %lg", &firtsNum, &mark, &secondNum);
-        switch (mark) {
-            case '+':
-                printf("%lg + %lg = %lg\n", firtsNum, secondNum, firtsNum + secondNum);
-                error = 0;
-                break;
-            case '-':
-                printf("%lg - %lg = %lg\n", firtsNum, secondNum, firtsNum - secondNum);
-                error = 0;
-                break;
-            case '*':
-                printf("%lg * %lg = %lg\n", firtsNum, secondNum, firtsNum * secondNum);
-                error = 0;
-                break;
-            case '/':
-                printf("%lg / %lg = %lg\n", firtsNum, secondNum, divide(firtsNum, secondNum, &error));
-                break;
-            default:
-                error = -1;
-                break;
-        }
-
         //Обработка ошибок
         switch (error) {
             case -1:
@@ -50,6 +28,34 @@ int main() {
                 break;
             case -2:
                 printf("It is impossible to divide by 0!\n");
+                break;
+        }
+
+        error = 0;
+        
+        scanf("%lg %c %lg", &firstNum, &mark, &secondNum);
+        switch (mark) {
+            case '+':
+                printf("%lg + %lg = %lg\n", firstNum, secondNum, firstNum + secondNum);
+                break;
+            case '-':
+                printf("%lg - %lg = %lg\n", firstNum, secondNum, firstNum - secondNum);
+                break;
+            case '*':
+                printf("%lg * %lg = %lg\n", firstNum, secondNum, firstNum * secondNum);
+                break;
+            case '/':
+                result = divide(firstNum, secondNum, &error);
+                if (0 == error) printf("%lg / %lg = %lg\n", firstNum, secondNum, result);
+                break;
+            case 'G':
+                break;
+            case 'D':
+                break;
+            case 'S':
+                break;
+            default:
+                error = -1;
                 break;
         }
     }

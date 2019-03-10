@@ -22,35 +22,35 @@ double divide(double firstNum, double secondNum, int *error) {
         *error = -2;
         return 0;
     }
-    error = 0;
+    *error = 0;
     return firstNum/secondNum;
 }
 
 /*
-@example для описания примера использования;
-@param для описания аргументов функции;
-@return для описания возвращаемых значений функции;
-@throws для описания обрабатываемых ошибок и работой с отслеживанием ошибок;
+@example (Извлечения корня квадратного из числа) 256 S = 16;
+@param (firstNum) число, (*error) код ошибки;
+@return result || 0;
+@throws (0) ошибок нет | *error;
 */
 double computeSqrt() {
     return 0;
 }
 
 /*
-@example для описания примера использования;
-@param для описания аргументов функции;
-@return для описания возвращаемых значений функции;
-@throws для описания обрабатываемых ошибок и работой с отслеживанием ошибок;
+@example (Деления двух чисел нацело со взятием результата-частного) 5 D 3 = 1;
+@param (firstNum) делимое, (secondNum) делитель, (*error) код ошибки;
+@return firstNum/secondNum || 0;
+@throws (0) ошибок нет, (-2) ошибка деления на 0 | *error;
 */
 double intDivide() {
     return 0;
 }
 
 /*
-@example для описания примера использования;
-@param для описания аргументов функции;
-@return для описания возвращаемых значений функции;
-@throws для описания обрабатываемых ошибок и работой с отслеживанием ошибок;
+@example (Геометрическая последовательность) ;
+@param (firstNum) a0, (secondNum) множитель;
+@return  0;
+@throws (0) ошибок нет, (-3) ошибка создания последовательности | *error;
 */
 double computeProgression() {
     return 0;
