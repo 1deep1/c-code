@@ -27,23 +27,18 @@ double divide(double firstNum, double secondNum, int *error) {
 }
 
 /*
-@example (Извлечения корня квадратного из числа) 256 S = 16;
-@param (firstNum) число, (*error) код ошибки;
-@return result || 0;
-@throws (0) ошибок нет | *error;
-*/
-double computeSqrt() {
-    return 0;
-}
-
-/*
 @example (Деления двух чисел нацело со взятием результата-частного) 5 D 3 = 1;
 @param (firstNum) делимое, (secondNum) делитель, (*error) код ошибки;
 @return firstNum/secondNum || 0;
 @throws (0) ошибок нет, (-2) ошибка деления на 0 | *error;
 */
-double intDivide() {
-    return 0;
+double intDivide(int firstNum, int secondNum, int *error) {
+    if (0==secondNum) {
+        *error = -2;
+        return 0;
+    }
+    *error = 0;
+    return firstNum/secondNum;
 }
 
 /*

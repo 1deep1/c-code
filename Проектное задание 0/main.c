@@ -57,6 +57,8 @@ int main() {
             case 'G':
                 break;
             case 'D':
+                result = intDivide(firstNum, secondNum, &error);
+                if (0 == error) printf("%lg D %lg = %lg\n", firstNum, secondNum, result);
                 break;
             case 'S':
                 if (firstNum >= 0) printf("%lg S = %lg\n", firstNum, sqrt(firstNum));
