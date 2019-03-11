@@ -8,7 +8,7 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g", "${workspaceFolder}/Проектное задание 0/main.c"
+                "-g", "${workspaceFolder}/ProjectAssignment_0/main.c"
                 //"-g", "test.c"
             ],
             "group": {
