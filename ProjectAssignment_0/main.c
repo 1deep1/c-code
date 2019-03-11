@@ -55,6 +55,7 @@ int main() {
                 if (0 == error) printf("%lg / %lg = %lg\n", firstNum, secondNum, result);
                 break;
             case 'G':
+                computeProgression(firstNum, secondNum, &error);
                 break;
             case 'D':
                 result = intDivide(firstNum, secondNum, &error);

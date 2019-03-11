@@ -32,7 +32,7 @@ double divide(double firstNum, double secondNum, int *error) {
 @return firstNum/secondNum || 0;
 @throws (0) ошибок нет, (-2) ошибка деления на 0 | *error;
 */
-double intDivide(int firstNum, int secondNum, int *error) {
+int intDivide(int firstNum, int secondNum, int *error) {
     if (0==secondNum) {
         *error = -2;
         return 0;
@@ -42,11 +42,16 @@ double intDivide(int firstNum, int secondNum, int *error) {
 }
 
 /*
-@example (Геометрическая последовательность) ;
+@example (Геометрическая последовательность) 2 G 2, 8 = 2, 4, 8, 16, 32, 64, 128, 256 = 510 = 68719476736;
 @param (firstNum) a0, (secondNum) множитель;
 @return  0;
 @throws (0) ошибок нет, (-3) ошибка создания последовательности | *error;
 */
-double computeProgression() {
+int computeProgression(int a0, int q, int *error) {
+    int n;
+    scanf("%d", &n);
+    for (int i = a0; i <= n; i++){
+        printf("%d, ", );
+    }
     return 0;
 }
