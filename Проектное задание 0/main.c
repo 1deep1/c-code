@@ -10,6 +10,7 @@
 */
 #include <stdio.h>
 #include "complexCalc.c"
+#include <math.h>
 
 /*
 @return Возвращает код ошибки в систему;
@@ -17,10 +18,11 @@
 */
 int main() {
     double firstNum, secondNum, result;
-    int error = 0;
+    int error;
     char mark = 0;
 
     while(mark != 'E') {
+        error = 0;
         //Обработка ошибок
         switch (error) {
             case -1:
@@ -31,8 +33,6 @@ int main() {
                 break;
         }
 
-        error = 0;
-        
         scanf("%lg %c %lg", &firstNum, &mark, &secondNum);
         switch (mark) {
             case '+':
@@ -53,6 +53,7 @@ int main() {
             case 'D':
                 break;
             case 'S':
+                printf("%lg S = %lg", firstNum, sqrt(firstNum));
                 break;
             default:
                 error = -1;
