@@ -22,7 +22,6 @@ int main() {
     char mark = 0;
 
     while(mark != 'E') {
-        error = 0;
         //Обработка ошибок
         switch (error) {
             case -1:
@@ -31,7 +30,14 @@ int main() {
             case -2:
                 printf("It is impossible to divide by 0!\n");
                 break;
+            case -3:
+                break;
+            case -4:
+                printf("Square root cannot be less than 0!\n");
+                break;
         }
+
+        error = 0;
 
         scanf("%lg %c %lg", &firstNum, &mark, &secondNum);
         switch (mark) {
@@ -53,7 +59,8 @@ int main() {
             case 'D':
                 break;
             case 'S':
-                printf("%lg S = %lg", firstNum, sqrt(firstNum));
+                if (firstNum >= 0) printf("%lg S = %lg\n", firstNum, sqrt(firstNum));
+                else error = -4;
                 break;
             default:
                 error = -1;
