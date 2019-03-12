@@ -3,7 +3,8 @@
 Проектное задание №0
 Калькулятор на языке Си с возможностями:
 Сложение, вычитание, умножение, деление, извлечения корня квадратного из числа,
-деления чисел нацело со взятием результата-частного, геометрическая последовательность
+деления чисел нацело со взятием результата-частного,
+геометрическая последовательность
 
 @author Eg0r.Grachev
 @link https://github.com/tRexSTYT/c-code
@@ -43,22 +44,24 @@ int intDivide(int firstNum, int secondNum, int *error) {
 }
 
 /*
-@example (Геометрическая последовательность) 2 G 2, 8 = 2 ... 256 = 510 = 68719476736;
-@param (firstNum) a0, (secondNum) множитель;
-@return  0;
-@throws (0) ошибок нет, (-3) ошибка создания последовательности | *error;
+@example (Геометрическая последовательность) 2 G 2 8 = 2 ... 256;
+@param a0, (q) множитель;
+@throws (0) ошибок нет, (-3) множитель меньше 1, (-5) невреный n | *error;
 */
 void computeProgression(int a0, int q, int *error) {
-    int n; //n > 0
+    int n, sum = 0, composition = 1;
     if (q > 0) {
         scanf("%d", &n);
-        for (int i = a0; i <= n; i++){
-            a0 *= q;
-            printf("%d ", a0);
-        }
+        if (n >= a0) {
+            for (int i = a0; i <= n; i++){
+                a0 *= q;
+                sum += a0;
+                composition *= a0;
+                printf("%d ", a0);
+            }
 
-        //printf("\nSum: %lg\n", a0 * (1 - pow(n, q)) / (1 - n));
-        //printf("\nComposition: %lg\n", );
-    }
-    else *error = -3;
+            printf("\nSum: %d", sum);
+            printf("\nComposition: %d\n", composition);
+        } else *error = -5;
+    } else *error = -3;
 }

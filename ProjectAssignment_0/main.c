@@ -2,7 +2,8 @@
 Проектное задание №0
 Калькулятор на языке Си с возможностями:
 Сложение, вычитание, умножение, деление, извлечения корня квадратного из числа,
-деления чисел нацело со взятием результата-частного, геометрическая последовательность
+деления чисел нацело со взятием результата-частного,
+геометрическая последовательность
 
 @author Eg0r.Grachev
 @link https://github.com/tRexSTYT/c-code
@@ -35,6 +36,9 @@ int main() {
                 break;
             case -4:
                 printf("Square root cannot be less than 0!\n");
+                break;
+            case -5:
+                printf("Your mom gay and n must be greater or equal to a0!\n");
                 break;
         }
 
