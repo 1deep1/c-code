@@ -10,6 +10,7 @@
 @link http://moria.1586.su/moodle/mod/page/view.php?id=1705
 */
 #include <stdio.h>
+#include <math.h>
 
 /*
 @example (Деление чисел) 5 / 5 = 1;
@@ -42,16 +43,22 @@ int intDivide(int firstNum, int secondNum, int *error) {
 }
 
 /*
-@example (Геометрическая последовательность) 2 G 2, 8 = 2, 4, 8, 16, 32, 64, 128, 256 = 510 = 68719476736;
+@example (Геометрическая последовательность) 2 G 2, 8 = 2 ... 256 = 510 = 68719476736;
 @param (firstNum) a0, (secondNum) множитель;
 @return  0;
 @throws (0) ошибок нет, (-3) ошибка создания последовательности | *error;
 */
-int computeProgression(int a0, int q, int *error) {
-    int n;
-    scanf("%d", &n);
-    for (int i = a0; i <= n; i++){
-        printf("%d, ", );
+void computeProgression(int a0, int q, int *error) {
+    int n; //n > 0
+    if (q > 0) {
+        scanf("%d", &n);
+        for (int i = a0; i <= n; i++){
+            a0 *= q;
+            printf("%d ", a0);
+        }
+
+        //printf("\nSum: %lg\n", a0 * (1 - pow(n, q)) / (1 - n));
+        //printf("\nComposition: %lg\n", );
     }
-    return 0;
+    else *error = -3;
 }

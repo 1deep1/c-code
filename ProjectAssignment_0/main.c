@@ -31,6 +31,7 @@ int main() {
                 printf("It is impossible to divide by 0!\n");
                 break;
             case -3:
+                printf("The multiplier must be greater than 0!\n");
                 break;
             case -4:
                 printf("Square root cannot be less than 0!\n");
