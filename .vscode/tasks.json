@@ -8,8 +8,8 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g", "${workspaceFolder}/ProjectAssignment_0/main.c"
-                //"-g", "${workspaceFolder}/ProjectAssignment_1/main.c"
+                //"-g", "${workspaceFolder}/ProjectAssignment_0/main.c"
+                "-g", "${workspaceFolder}/ProjectAssignment_1/main.c"
                 //"-g", "test.c"
             ],
             "group": {

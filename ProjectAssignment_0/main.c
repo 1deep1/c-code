@@ -15,7 +15,6 @@
 
 /*
 @return Возвращает код ошибки в систему;
-@throws (-1) ошибка ввода, (-2) ошибка деления на 0 | *error;
 */
 int main() {
     double firstNum, secondNum, result;

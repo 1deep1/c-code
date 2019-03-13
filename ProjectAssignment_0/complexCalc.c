@@ -1,17 +1,14 @@
 /*
 Код с дополнительными и сложными вычислениями
-Проектное задание №0
-Калькулятор на языке Си с возможностями:
-Сложение, вычитание, умножение, деление, извлечения корня квадратного из числа,
-деления чисел нацело со взятием результата-частного,
-геометрическая последовательность
+Проектное задание №0 (См. main.c 1-11)
+Вынесены функции:
+Деление, деление нацело, геометрическая прогрессия;
 
 @author Eg0r.Grachev
 @link https://github.com/tRexSTYT/c-code
 @link http://moria.1586.su/moodle/mod/page/view.php?id=1705
 */
 #include <stdio.h>
-#include <math.h>
 
 /*
 @example (Деление чисел) 5 / 5 = 1;
@@ -24,7 +21,6 @@ double divide(double firstNum, double secondNum, int *error) {
         *error = -2;
         return 0;
     }
-    *error = 0;
     return firstNum/secondNum;
 }
 
@@ -39,7 +35,6 @@ int intDivide(int firstNum, int secondNum, int *error) {
         *error = -2;
         return 0;
     }
-    *error = 0;
     return firstNum/secondNum;
 }
 

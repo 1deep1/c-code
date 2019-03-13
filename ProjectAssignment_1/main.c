@@ -6,6 +6,8 @@
 @link http://moria.1586.su/moodle/mod/page/view.php?id=1709
 */
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include <iostream>
 
 /*
@@ -13,7 +15,7 @@
 @throws | *error;
 */
 int main() {
-    printf("Your mom gay :)\n");
+    printf("Your mom gay\n");
     system("pause");
     return 0;
 }
