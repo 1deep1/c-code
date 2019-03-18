@@ -8,14 +8,17 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <iostream>
 
 /*
 @return Возвращает код ошибки в систему;
 @throws | *error;
+@uses <stdio.h>, <string.h>, <stdlib.h>;
 */
-int main() {
-    printf("Your mom gay\n");
-    system("pause");
+int main(int argc, char *argv[]) {
+    if(argc!=2) {
+        printf("Вы забыли ввести свое имя.\n");
+        exit(1);
+    }
+    printf("Привет и соси %s\n", argv[1]);
     return 0;
 }
