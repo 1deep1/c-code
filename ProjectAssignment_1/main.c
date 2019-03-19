@@ -6,7 +6,6 @@
 @link http://moria.1586.su/moodle/mod/page/view.php?id=1709
 */
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 
 /*
@@ -15,10 +14,10 @@
 @uses <stdio.h>, <string.h>, <stdlib.h>;
 */
 int main(int argc, char *argv[]) {
-    if(argc!=2) {
-        printf("Вы забыли ввести свое имя.\n");
-        exit(1);
+    switch (*argv[1]) {
+        case 'F':
+            break;
+        case 'S':
+            break;
     }
-    printf("Привет и соси %s\n", argv[1]);
-    return 0;
 }
