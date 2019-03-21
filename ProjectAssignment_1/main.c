@@ -6,13 +6,11 @@
 @link http://moria.1586.su/moodle/mod/page/view.php?id=1709
 */
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "errorChecker.c"
 
 /*
-@return Возвращает код ошибки в систему;
-@throws | *error;
+Основная программа
+@uses <stdio.h>, errorChecker.c, calcFunctions.c
 */
 int main(int argc, char *argv[]) {
     int errorCode = 0;
