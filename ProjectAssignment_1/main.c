@@ -6,11 +6,13 @@
 @link http://moria.1586.su/moodle/mod/page/view.php?id=1709
 */
 #include <stdio.h>
+#include <string.h>
 #include "errorChecker.c"
+#include "calcFunctions.c"
 
 /*
 Основная программа
-@uses <stdio.h>, errorChecker.c, calcFunctions.c
+@uses <stdio.h>, <string.h>, errorChecker.c, calcFunctions.h
 */
 int main(int argc, char *argv[]) {
     int errorCode = 0;
@@ -20,15 +22,15 @@ int main(int argc, char *argv[]) {
         checkError(&errorCode);
         return 0;
     }
-    switch (argv[1][0]) {
-        case 'F':
-            break;
-        case 'S':
-            break;
-        default:
-            errorCode = -1;
-            break;
+
+    for (int i = 1; i < argc; i++) {
+            if (0 == strncmp(argv[i], "SET", strlen("SET"))) parseSet(argv[i]);
+            else if (0 == strncmp(argv[i], "FUNCTION", strlen("FUNCTION"))) parseFunc(argv[i]);
+            else {
+                errorCode = -1;
+                checkError(&errorCode);
+            }
+            computeFunc();
     }
-    checkError(&errorCode);
     return 0;
 }

@@ -5,14 +5,13 @@
 */
 #include <stdio.h>
 
-/*
-Функция присваивания переменной
-@param 
-@global 
-@example 
-@uses <stdio.h>
-*/
-int findUnknown() {
+int parseSet(char *str) {
+    printf("%s\n", str);
+    return 0;
+}
+
+int parseFunc(char *str) {
+    printf("%s\n", str);
     return 0;
 }
 
