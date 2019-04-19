@@ -10,12 +10,15 @@
 #include "errorChecker.c"
 #include "calcFunctions.c"
 
+#define ARG_AMOUNT 128
+
 /*
 Основная программа
 @uses <stdio.h>, <string.h>, errorChecker.c, calcFunctions.h
 */
 int main(int argc, char *argv[]) {
-    int errorCode = 0;
+    int errorCode = 0, argCount = 0, argValue[ARG_AMOUNT];
+    char argName[ARG_AMOUNT];
 
     if (argc < 2) {
         errorCode = -1;
@@ -24,13 +27,13 @@ int main(int argc, char *argv[]) {
     }
 
     for (int i = 1; i < argc; i++) {
-            if (0 == strncmp(argv[i], "SET", strlen("SET"))) parseSet(argv[i]);
+            if (0 == strncmp(argv[i], "SET", strlen("SET"))) parseSet(argv[i], argName, argValue, argCount);
             else if (0 == strncmp(argv[i], "FUNCTION", strlen("FUNCTION"))) parseFunc(argv[i]);
             else {
                 errorCode = -1;
                 checkError(&errorCode);
             }
-            computeFunc();
     }
+    computeFunc();
     return 0;
 }
