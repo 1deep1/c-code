@@ -10,7 +10,7 @@ int parseSet(char *str, int argName[], int argValue[], int argCount) {
     return 0;
 }
 
-int parseFunc(char *str) {
+int parseFunc(char *str, int *a, int *b, char *x, char *y) {
     printf("%s\n", str);
     return 0;
 }
@@ -22,6 +22,6 @@ int parseFunc(char *str) {
 @example 
 @uses <stdio.h>
 */
-int computeFunc() {
+int computeFunc(int argName[], int argValue[], int argCount, int *a, int *b, char *x, char *y) {
     return 0;
 }
