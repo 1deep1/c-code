@@ -8,7 +8,6 @@
 /*
 Функция обработки ошибок
 @param int* errorCode - указатель на номер ошибки из главной функции
-@global errorCode возвращается в 0 в конце функции
 @example printf("Input error");
 @uses <stdio.h>
 */

@@ -6,7 +6,6 @@
 @link http://moria.1586.su/moodle/mod/page/view.php?id=1709
 */
 #include <stdio.h>
-#include <string.h>
 #include "errorChecker.c"
 #include "calcFunctions.c"
 
@@ -27,13 +26,13 @@ int main(int argc, char *argv[]) {
     }
 
     for (int i = 1; i < argc; i++) {
-            if (0 == strncmp(argv[i], "SET", strlen("SET"))) parseSet(argv[i], argName, argValue, argCount);
+            if (0 == strncmp(argv[i], "SET", strlen("SET"))) parseSet(argv[i], argName, argValue, &argCount);
             else if (0 == strncmp(argv[i], "FUNCTION", strlen("FUNCTION"))) parseFunc(argv[i], &a, &b, &x, &y);
             else {
                 errorCode = -1;
                 checkError(&errorCode);
             }
     }
-    computeFunc(argName, argValue, argCount, &a, &b, &x, &y);
+    computeFunc(argName, argValue, argCount, a, b, x, y);
     return 0;
 }
