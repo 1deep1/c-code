@@ -4,6 +4,7 @@
 @see main.c
 */
 #include "getFunctions.c"
+//#include "errorChecker.c"
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -11,10 +12,8 @@
 
 /*
 Парсинг SET
-@uses <stdio.h>, 
-@return 0
 */
-int parseSet(char *str, char *argName, int *argValue, int *argCount) {
+void parseSet(char *str, char *argName, int *argValue, int *argCount) {
     int i;
 
     for (i = 4;  i < (int)strlen(str) && str[i] != '='; i++);
@@ -27,36 +26,40 @@ int parseSet(char *str, char *argName, int *argValue, int *argCount) {
         argName[*argCount] = str[i+1];
     }
     (*argCount)++;
-
-    return 0;
 }
 
 /*
 Парсинг Function
-@uses <stdio.h>, 
-@return 0
+@uses getFunctions.c
 */
-int parseFunc(char *str, int *a, int *b, char *x, char *y) {
+void parseFunc(char *str, int *a, int *b, char *x, char *y) {
     getY(str, y);
     getAX(str, x, a);
     getB(str, b);
-    return 0;
 }
 
 /*
-Функция
+Функция итогового вывода
+@uses errorChecker.c
 */
-int computeFunc(char *argName, int *argValue, int argCount, int a, int b, char x, char y) {
-    for (int i = 0; i < argCount; i++) {
-        if (y == argName[i])
+void computeFunc(char *argName, int *argValue, int argCount, int a, int b, char x, char y) {for (int i = 0; i < argCount; i++) {
+        if (y == argName[i]) {
+            /*
+            *errorCode = -2;
+            checkError(&errorCode);
+            */
             printf("CANNOT SET CONSTANT\n");
-        else if (x != argName[i])
-            printf("HAVE NO '%c' VARIABLE\n", argName[i]);
-        else if (y == argName[i] && x == argName[i])
+        }
+        else if (x != argName[i]) printf("HAVE NO '%c' VARIABLE\n", argName[i]);
+        else if (y == argName[i] && x == argName[i]) {
+            /*
+            *errorCode = -3;
+            checkError(&errorCode);
+            */
             printf("HAVE NO FUNCTION AT ALL\n");
+        }
         else {
             printf("%c(%d) = %d\n", y, argValue[i], argValue[i] * a + b);
         }
     }
-    return 0;
 }

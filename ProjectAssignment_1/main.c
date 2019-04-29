@@ -5,15 +5,15 @@
 @link https://github.com/tRexSTYT/c-code
 @link http://moria.1586.su/moodle/mod/page/view.php?id=1709
 */
-#include <stdio.h>
-#include "errorChecker.c"
 #include "calcFunctions.c"
+#include "errorChecker.c"
+#include <stdio.h>
 
 #define ARG_AMOUNT 128
 
 /*
 Основная программа
-@uses <stdio.h>, <string.h>, errorChecker.c, calcFunctions.h
+@uses errorChecker.c, calcFunctions.c
 */
 int main(int argc, char *argv[]) {
     int errorCode = 0, argCount = 0, argValue[ARG_AMOUNT], a, b;
@@ -22,7 +22,6 @@ int main(int argc, char *argv[]) {
     if (argc < 2) {
         errorCode = -1;
         checkError(&errorCode);
-        return 0;
     }
 
     for (int i = 1; i < argc; i++) {
