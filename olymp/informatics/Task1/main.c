@@ -8,6 +8,6 @@ int main(int argc, const char * argv[]) {
     c = ((k - (k%10)) / 100) - (d*10);
     b = ((k - (k%10)) / 10) - (((k - (k%10)) / 100)*10);
     a = k - (k/10) * 10;
-    printf("%d", a+b+c+d);
+    printf("%d\nYay!", a+b+c+d);
     return 0;
 }
