@@ -3,11 +3,11 @@
 int main(){
     int a, b, res = 0;
     scanf("%d%d", &a, &b);
-    for(int i = a; i <= b; i++){
-        if(i % 2 == 1)
-            res -= i;
-        if(i % 2 == 0)
-            res += i;
+    for(a; a <= b; a++){
+        if(a % 2 == 1)
+            res -= a;
+        if(a % 2 == 0)
+            res += a;
     }
     printf("%d", res);
     return 0;
