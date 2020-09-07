@@ -8,11 +8,12 @@
             "type": "shell",
             "command": "gcc",
             "args": [
-                "-g", "${workspaceFolder}/27/6202/main.c"
+                //"-g", "${workspaceFolder}/mirea_code/2task/main.c"
+                //"-g", "${workspaceFolder}/27/6202/main.c"
                 //"-g", "${workspaceFolder}/ProjectAssignment_0/main.c"
                 //"-g", "${workspaceFolder}/ProjectAssignment_1/main.c"
                 //"-DDEBUG", "-DMAX_N=5", "-DMAX_M=5", "-o", "calc2", "-Wall", "-Wextra", "-Werror", "${workspaceFolder}/ProjectAssignment_1/main.c"
-                //"-g", "test.c"
+                "-g", "test.c"
             ],
             "group": {
                 "kind": "build",
