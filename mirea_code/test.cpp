@@ -1,11 +1,11 @@
 #include <iostream>
 
 using namespace std;
- 
+
 int main()
 {
-    int x;
+    //cout<<"Hello World";
+    std::cout << "What is your name? ";
 
-    std::cin >> x;
-    std::cout << x;
+    return 0;
 }
