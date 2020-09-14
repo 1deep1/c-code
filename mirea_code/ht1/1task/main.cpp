@@ -4,8 +4,8 @@ using namespace std;
  
 int main()
 {
-    int x;
+    int x = 0;
 
-    cin >> x;
-    cout << x;
+    std::cin >> x;
+    std::cout << x;
 }

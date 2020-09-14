@@ -8,7 +8,7 @@
             "type": "shell",
             "command": "gcc",
             "args": [
-                "-g", "${workspaceFolder}/mirea_code/check_tasks/2task/main.c"
+                "-g", "${workspaceFolder}/mirea_code/ht1/1task/main.cpp"
                 //"-g", "${workspaceFolder}/27/6202/main.c"
                 //"-g", "${workspaceFolder}/ProjectAssignment_0/main.c"
                 //"-g", "${workspaceFolder}/ProjectAssignment_1/main.c"
