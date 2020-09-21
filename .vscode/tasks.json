@@ -8,12 +8,31 @@
             "type": "shell",
             "command": "gcc",
             "args": [
-                "-g", "${workspaceFolder}/mirea_code/ht1/1task/main.cpp"
+                "-g",
+                "${workspaceFolder}/mirea_code/ht1/1task/main.cpp"
                 //"-g", "${workspaceFolder}/27/6202/main.c"
                 //"-g", "${workspaceFolder}/ProjectAssignment_0/main.c"
                 //"-g", "${workspaceFolder}/ProjectAssignment_1/main.c"
                 //"-DDEBUG", "-DMAX_N=5", "-DMAX_M=5", "-o", "calc2", "-Wall", "-Wextra", "-Werror", "${workspaceFolder}/ProjectAssignment_1/main.c"
                 //"-g", "${workspaceFolder}/mirea_code/test.cpp"
+            ],
+            "group": "build"
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: clang++ build active file",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
             ],
             "group": {
                 "kind": "build",

@@ -1,11 +1,16 @@
-#include <iostream>
-
+#include<iostream>
+ 
 using namespace std;
  
 int main()
 {
-    int x = 0;
+    setlocale(LC_ALL, "Russian");
 
-    std::cin >> x;
-    std::cout << x;
+    string name;
+
+    cout << "Приветик. Как звать?\nИмя: ";
+    cin >> name;
+    cout << "О, круто! Теперь я знаю, что тебя зовут " << name << endl;
+
+    return 0;
 }
