@@ -1,6 +1,5 @@
 #include <iostream>
 #include <math.h>
-#include <ctype.h>
 
 using namespace std;
 
@@ -14,30 +13,12 @@ int main() {
     while (key == 'Y' || key == 'y') {
         cout << "Введи A: ";
         cin >> a;
-        //cout << isdigit(a);
-        if (!isdigit(a)) {
-            a = 0;
-            cout << "В A должно быть число.\n";
-            break;
-        }
 
         cout << "Введи B: ";
         cin >> b;
 
-        if (!isdigit(b)) {
-            b = 0;
-            cout << "В B должно быть число.\n";
-            break;
-        }
-
         cout << "Введи C: ";
         cin >> c;
-
-        if (!isdigit(c)) {
-            c = 0;
-            cout << "В C должно быть число.\n";
-            break;
-        }
 
         d = b * b - 4 * a * c;
 
