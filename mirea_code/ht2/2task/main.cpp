@@ -6,18 +6,25 @@
 
 using namespace std;
 
-long double calcW(int x, int a) {
-    int absX, lnX;
-    absX = abs(x);
-    lnX = log10(absX);
+double calcW(int x, int a) {
+    double xD = 1.0 * x, aD = 1.0 * a;
+    //double endSqrt = aD - (xD * xD);
 
-    cout << "\nlnX: " << lnX;
+    /*
+    cout << "\nxD = " << xD;
+    cout << "\naD = " << aD;
 
-    if (absX < 1) {
-        return a * lnX;
+    cout << "\nabsXD = " << abs(xD);
+    cout << "\nlogXD = " << log(xD);
+    cout << "\nendSqrt = " << endSqrt;
+    cout << "\nsqrt = " << sqrt(endSqrt);
+    */
+    
+    if (abs(xD) < 1) {
+        return aD * log(xD);
     }
-    else if (absX >= 1) {
-        return sqrt(a - (x * x));
+    else if (abs(xD) >= 1) {
+        return sqrt(aD - (xD * xD));
     }
     else {
         return 0;
@@ -27,7 +34,7 @@ long double calcW(int x, int a) {
 int main() {
     srand((unsigned int) time(NULL));
     int x, a;
-    long double w;
+    double w;
 
     int error = 0;
     char key = 'y';
@@ -39,9 +46,6 @@ int main() {
         a = rand() % 101 - 50;
 
         cout << "X: " << x << "\n"<< "A: " << a;
-
-        cout << "\nabs x: " << abs(x);
-        cout << "\nabs a: " << abs(a);
 
         w = calcW(x, a);
         cout << "\nW = " << w;

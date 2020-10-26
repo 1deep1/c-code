@@ -8,5 +8,10 @@ long double calcS(long double rBig, long double r, long double l) {
 }
 
 long double calcV(long double rBig, long double r, long double h) {
-    return ( (1/3) * M_PI * h ) * ( (rBig * rBig) + ( rBig * r ) + (r * r) );
+    long double answer;
+
+    //answer = M_PI;
+    answer = (1.0 / 3.0) * M_PI * h * ( (rBig * rBig) + rBig * r + (r * r) );
+
+    return answer;
 }
