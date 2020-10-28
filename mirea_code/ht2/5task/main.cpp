@@ -3,6 +3,8 @@
 using namespace std;
 
 int main() {
+    setlocale(LC_ALL, "rus");
+
     float x = -4.0, y, step = 0.5;
 
     int error = 0;
