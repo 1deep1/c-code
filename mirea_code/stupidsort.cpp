@@ -12,19 +12,29 @@ int main() {
 
     char key = 'y';
 
-    cout << "Привет! Давай я тебе покажу глупую сортировку.\n";
-
-    for (int i = 0; i < 10; i++)
-        {
-            array1[i] = 2 + rand() & 47;
-        }
+    cout << "Hey! Wanna see some stupid sort?\n";
+    for (int k = 0; k <= 30; k++) {
+        cout << "*";
+    }
 
     while (key == 'Y' || key == 'y') {
-        for(int j=0; j<10; j++) {
-            for (int i = 0; i < 9; i++)
-            {
-                if (array1[i] > array1[i+1])
-                {
+
+        //Записываем различные числа в массив для дальнейшей сортировки
+        for (int i = 0; i < 10; i++) {
+            array1[i] = 1 + rand() & 54;
+        }
+
+        //Выводим элементы массива
+        cout << "\nArray without sort: " << endl;
+        for (int t = 0; t < 10; t++)
+        {
+            cout << array1[t] << endl;
+        }
+
+        //Сам алгоритм глупой сортировки
+        for (int j = 0; j < 10; j++) {
+            for (int i = 0; i < 9; i++) {
+                if (array1[i] > array1[i+1]) {
                     pail = array1[i];
                     array1[i] = array1[i + 1];
                     array1[i + 1] = pail;
@@ -32,13 +42,13 @@ int main() {
             }
         }
 
-        cout << "Отсортированный глупо массив: " << endl;
-        for (int t = 0; t < 10; t++)
-        {
+        //Выводим отсортированные элементы
+        cout << "\nArray sorted by stupid sort: " << endl;
+        for (int t = 0; t < 10; t++) {
             cout << array1[t] << endl;
         }
 
-        cout << "\nХочешь еще разок? (Y или N): ";
+        cout << "\nAgain? (Y or N): ";
         cin >> key;
     }
 
