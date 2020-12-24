@@ -4,3 +4,5 @@ Rex 400 2 5
 LOL 500 2 5
 Dolly 300 5 8
 Mike 250 5 9
+ScaryJack 255 3 10
+Cloun 150 2 5
